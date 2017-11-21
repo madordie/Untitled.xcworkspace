@@ -210,8 +210,18 @@ extension InputFlow {
                 return .ctl_abandon
             case 83..<92:
                 return .info("\(v - 82)")
-            case 18..<26:
+            case 18..<22: // 1 - 4
+                return .info("\(v - 17)")
+            case 23:    // 5
                 return .info("\(v - 18)")
+            case 22:    // 6
+                return .info("\(v - 16)")
+            case 26:    // 7
+                return .info("\(v - 19)")
+            case 28:    //  8
+                return .info("\(v - 20)")
+            case 25:    //  9
+                return .info("\(v - 16)")
             case 51:
                 return .ctl_delete
             default:
